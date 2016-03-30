@@ -47,7 +47,15 @@ public class Mano {
 		return numCartas;
 	}
 	public String toString(){
-		return "holA";
+            StringBuilder toRet=new StringBuilder();
+            toRet.append("Nº de cartas en mano:\t");
+            toRet.append(getNumCartas());
+            for (int i=0; i<getNumCartas();i++){
+                toRet.append(cartasMano[i].toString());
+            }
+            
+            return toRet.toString();
 	}
+
 
 }
